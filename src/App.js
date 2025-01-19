@@ -1,6 +1,7 @@
 import "./App.css";
 
 import Home from "./pages/Home";
+import AdminDashboard from "./pages/AdminDashboard";
 import Footer from "./components/Footer";
 import { Navigation } from "./components/Navigation";
 
@@ -11,29 +12,29 @@ function App() {
     <Router>
       <div
         style={{
-          minHeight: "100vh", // min-h-screen
+          minHeight: "100vh",
           display: "flex",
-          flexDirection: "column", // flex-col
-          backgroundColor: "#F9FAFB", // bg-gray-50
+          flexDirection: "column",
+          backgroundColor: "#F9FAFB",
         }}
       >
         <Navigation />
         <main
           style={{
             width: "100%",
-            maxWidth: "1280px", // container width equivalent (approximation)
-            margin: "0 auto", // mx-auto
-            paddingLeft: "1rem", // px-4
-            paddingRight: "1rem", // px-4
-            paddingTop: "2rem", // py-8
-            paddingBottom: "2rem", // py-8
-            flexGrow: 1, // flex-grow
+            maxWidth: "1280px",
+            margin: "0 auto",
+            paddingLeft: "1rem",
+            paddingRight: "1rem",
+            paddingTop: "2rem",
+            paddingBottom: "2rem",
+            flexGrow: 1,
           }}
         >
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/map/:profileId" element={<MapView />} /> */}
+            <Route path="/admin" element={<AdminDashboard />} />
+            {/* <Route path="/map/:profileId" element={<MapView />} /> */}
           </Routes>
         </main>
         <Footer />
